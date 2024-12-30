@@ -1,13 +1,13 @@
 
 
-import { CTASection } from "@/features/home/cta-section";
-import { FeaturesSection } from "@/features/home/features-section";
-import { HeroSection } from "@/features/home/hero-section";
-import { Navbar } from "@/features/home/navbar";
-import GradientBackground from "@/features/themes/gradientbackground/gradient-background";
-import { ThemeProvider } from "@/features/themes/themeproviders/theme-providers";
-import { Providers } from "./provider";
-import { LocalStorageProvider } from "@/features/local-storage-provider";
+// import { CTASection } from "@/features/home/cta-section";
+// import { FeaturesSection } from "@/features/home/features-section";
+// import { HeroSection } from "@/features/home/hero-section";
+// import { Navbar } from "@/features/home/navbar";
+// import GradientBackground from "@/features/themes/gradientbackground/gradient-background";
+// import { ThemeProvider } from "@/features/themes/themeproviders/theme-providers";
+// import { Providers } from "./provider";
+// import { LocalStorageProvider } from "@/features/local-storage-provider";
 import { HomeComponent } from "@/features/home/home-component";
 
 
