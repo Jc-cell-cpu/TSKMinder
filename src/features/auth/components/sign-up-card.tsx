@@ -1,6 +1,6 @@
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
-import { FcRules } from "react-icons/fc";
+
 
 import { DottedSeparator } from "@/components/dotted-seaparator";
 import { Button } from "@/components/ui/button";

@@ -33,7 +33,7 @@ export default function Contact() {
                         >
                             <h2 className="text-2xl font-semibold mb-4 text-cyan-600">Get in Touch</h2>
                             <p className="mb-6">
-                                We'd love to hear from you. Whether you have a question about features, trials, pricing, or anything else, our team is ready to answer all your questions.
+                                We&apos;d love to hear from you. Whether you have a question about features, trials, pricing, or anything else, our team is ready to answer all your questions.
                             </p>
                             <div className="space-y-4">
                                 <div className="flex items-center">

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ChevronRight, FileText, ShieldCheck, Facebook, Twitter, LinkedinIcon as LinkedIn, Instagram } from 'lucide-react';
+import { FileText, ShieldCheck, Facebook, Twitter, LinkedinIcon as LinkedIn, Instagram } from 'lucide-react';
 import { ThemeProvider } from "@/features/themes/themeproviders/theme-providers";
 import { ThemeToggle } from "@/features/themes/themecomponents/theme-toggle";
 import GradientBackground from "@/features/themes/gradientbackground/gradient-background";

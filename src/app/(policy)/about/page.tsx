@@ -1,9 +1,9 @@
-'use client'
+"use client"
 
-import Image from 'next/image'
-import { motion } from 'framer-motion'
-import { CheckCircle, Users, Zap } from 'lucide-react'
-import PolicyLayout from '@/features/auth/components/header-footer'
+import Image from "next/image"
+import { motion } from "framer-motion"
+import { CheckCircle, Users, Zap } from "lucide-react"
+import PolicyLayout from "@/features/auth/components/header-footer"
 
 export default function AboutUs() {
     const features = [
@@ -41,7 +41,7 @@ export default function AboutUs() {
                         >
                             <h2 className="text-2xl font-semibold mb-4 text-cyan-600">Our Mission</h2>
                             <p className="leading-relaxed">
-                                At TaskMinder, we're on a mission to revolutionize the way teams manage tasks and track bugs.
+                                At TaskMinder, we&apos;re on a mission to revolutionize the way teams manage tasks and track bugs.
                                 We believe in the power of efficient collaboration and strive to provide tools that enhance
                                 productivity while simplifying complex workflows.
                             </p>

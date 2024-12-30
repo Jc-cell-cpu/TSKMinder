@@ -1,4 +1,3 @@
-import AnimatedGradient from '@/features/home/animated-gradient'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 
