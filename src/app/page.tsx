@@ -8,6 +8,7 @@ import GradientBackground from "@/features/themes/gradientbackground/gradient-ba
 import { ThemeProvider } from "@/features/themes/themeproviders/theme-providers";
 import { Providers } from "./provider";
 import { LocalStorageProvider } from "@/features/local-storage-provider";
+import { HomeComponent } from "@/features/home/home-component";
 
 
 
@@ -41,7 +42,7 @@ export default function Home() {
     //     </ThemeProvider>
     //   </Providers>
     // </LocalStorageProvider>
-    <div>hello</div>
+    <HomeComponent />
 
   );
 }
