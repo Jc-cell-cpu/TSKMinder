@@ -1,3 +1,4 @@
+'use client'
 import PolicyLayout from "@/features/auth/components/header-footer";
 
 

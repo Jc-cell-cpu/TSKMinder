@@ -1,4 +1,4 @@
-"use client"
+'use client'
 
 import { Providers } from '@/app/provider'
 import { motion } from 'framer-motion'

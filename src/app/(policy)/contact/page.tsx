@@ -1,5 +1,4 @@
 'use client'
-
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Mail, MessageSquare, Phone } from 'lucide-react'
@@ -12,18 +11,15 @@ export default function Contact() {
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [message, setMessage] = useState('')
-
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault()
         // Handle form submission logic here
         console.log('Form submitted:', { name, email, message })
     }
-
     return (
         <PolicyLayout>
             <div className="max-w-4xl mx-auto">
                 <h1 className="text-4xl font-bold mb-6 text-blue-600 text-center">Contact Us</h1>
-
                 <div className="shadow-lg rounded-lg p-8 mb-8">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         <motion.div
