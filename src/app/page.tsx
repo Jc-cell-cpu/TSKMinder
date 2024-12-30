@@ -8,7 +8,7 @@ import GradientBackground from "@/features/themes/gradientbackground/gradient-ba
 import { ThemeProvider } from "@/features/themes/themeproviders/theme-providers";
 import { Providers } from "./provider";
 import { LocalStorageProvider } from "@/features/local-storage-provider";
-import clsx from "clsx";
+
 
 
 export default function Home() {
