@@ -5,13 +5,10 @@ import { HeroSection } from "@/features/home/hero-section";
 import { Navbar } from "@/features/home/navbar";
 import GradientBackground from "@/features/themes/gradientbackground/gradient-background";
 import { ThemeProvider } from "@/features/themes/themeproviders/theme-providers";
-// import { Providers } from "./provider";
-// import { HomeComponent } from "@/features/home/home-component";
 
 
 export default function Home() {
   return (
-    // <LocalStorageProvider>
     <ClientWrapper>
       <ThemeProvider>
         <div className="flex min-h-screen flex-col overflow-x-hidden w-full">
@@ -38,8 +35,6 @@ export default function Home() {
         </div>
       </ThemeProvider>
     </ClientWrapper>
-    // </LocalStorageProvider>
-    // <HomeComponent />
 
   );
 }
