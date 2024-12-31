@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
 import { Typewriter } from "./type-writer"
 import { Providers } from "@/app/provider"
+import Link from "next/link"
 
 export function HeroSection() {
     return (
@@ -20,9 +21,10 @@ export function HeroSection() {
                             <div className="space-y-2">
                                 <motion.h1
                                     className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl"
-                                    style={{ lineHeight: "normal" }}
+                                    style={{ lineHeight: "normal", minHeight: "4.5rem" /* Adjust as needed */ }}
                                     initial={{ opacity: 0, y: 50 }}
                                     animate={{ opacity: 1, y: 0 }}
+                                    exit={{ opacity: 0 }}
                                     transition={{ delay: 0.2, duration: 0.8 }}
                                 >
                                     <Typewriter
@@ -33,6 +35,7 @@ export function HeroSection() {
                                         ]}
                                         delay={50}
                                         pauseTime={1500}
+                                        fadeDuration={500}
                                         className="bg-gradient-to-r from-violet-600 via-fuchsia-500 to-cyan-400 bg-clip-text text-transparent"
                                     />
                                 </motion.h1>
@@ -40,11 +43,13 @@ export function HeroSection() {
                                     className="max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400"
                                     initial={{ opacity: 0, y: 50 }}
                                     animate={{ opacity: 1, y: 0 }}
+                                    exit={{ opacity: 0 }}
                                     transition={{ delay: 0.4, duration: 0.8 }}
                                 >
                                     TaskMinder helps teams track bugs, manage tasks, and deliver great software. Simple, powerful, and built for modern teams.
                                 </motion.p>
                             </div>
+
 
                             <motion.div
                                 className="flex flex-col gap-2 min-[400px]:flex-row justify-center md:justify-start"
@@ -52,19 +57,23 @@ export function HeroSection() {
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: 0.6, duration: 0.8 }}
                             >
-                                <Button
-                                    size="lg"
-                                    className="bg-gradient-to-r from-violet-600 to-cyan-400 hover:opacity-90 transition-opacity"
-                                >
-                                    Get Started
-                                </Button>
-                                <Button
-                                    size="lg"
-                                    variant="outline"
-                                    className="border-violet-600 text-violet-600 hover:bg-violet-50 dark:border-violet-400 dark:text-violet-400 dark:hover:bg-violet-900"
-                                >
-                                    Watch Demo
-                                </Button>
+                                <Link href="/sign-in">
+                                    <Button
+                                        size="lg"
+                                        className="bg-gradient-to-r from-violet-600 to-cyan-400 hover:opacity-90 transition-opacity"
+                                    >
+                                        Get Started
+                                    </Button>
+                                </Link>
+                                <Link href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
+                                    <Button
+                                        size="lg"
+                                        variant="outline"
+                                        className="border-violet-600 text-violet-600 hover:bg-violet-50 dark:border-violet-400 dark:text-violet-400 dark:hover:bg-violet-900"
+                                    >
+                                        Watch Demo
+                                    </Button>
+                                </Link>
                             </motion.div>
                         </motion.div>
                         <motion.div

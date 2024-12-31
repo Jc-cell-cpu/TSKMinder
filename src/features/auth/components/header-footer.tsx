@@ -16,9 +16,17 @@ interface PolicyLayoutProps {
 const PolicyLayout = ({ children }: PolicyLayoutProps) => {
     const [isMounted, setIsMounted] = useState(false)
     const [isMenuOpen, setIsMenuOpen] = useState(false)
+    const [isScrolled, setIsScrolled] = useState(false)
 
     useEffect(() => {
         setIsMounted(true)
+
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 10)
+        }
+
+        window.addEventListener('scroll', handleScroll)
+        return () => window.removeEventListener('scroll', handleScroll)
     }, [])
 
     if (!isMounted) {
@@ -29,7 +37,8 @@ const PolicyLayout = ({ children }: PolicyLayoutProps) => {
         <ThemeProvider>
             <GradientBackground />
             <div className="min-h-screen flex flex-col">
-                <header className="shadow-md">
+                <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-200 ease-in-out ${isScrolled ? 'backdrop-blur-md bg-white/70 dark:bg-gray-900/70 shadow-md' : ' '
+                    }`}>
                     <div className="mx-auto max-w-screen-2xl p-4">
                         <nav className="flex flex-wrap justify-between items-center">
                             <Link href="/" className="flex items-center gap-3">
@@ -65,7 +74,7 @@ const PolicyLayout = ({ children }: PolicyLayoutProps) => {
                     </div>
                 </header>
 
-                <main className="flex-grow">
+                <main className="flex-grow pt-[72px] md:pt-[80px]">
                     <div className="mx-auto max-w-screen-xl p-4">
                         <div className="flex flex-col items-center justify-center pt-4 md:pt-14">
                             {children}
