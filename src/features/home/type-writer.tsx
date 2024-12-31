@@ -17,7 +17,7 @@ export function Typewriter({
     fadeDuration = 500,
     className
 }: TypewriterProps) {
-    const [currentText, setCurrentText] = useState("");
+    const [, setCurrentText] = useState("");
     const [displayText, setDisplayText] = useState("");
     const [currentIndex, setCurrentIndex] = useState(0); // Tracks the current character index
     const [currentSentence, setCurrentSentence] = useState(0); // Tracks the current sentence index
