@@ -52,7 +52,7 @@ const PolicyLayout = ({ children }: PolicyLayoutProps) => {
                             >
                                 <Menu className="h-6 w-6" />
                             </Button>
-                            <div className={`w-full md:w-auto md:flex items-center gap-4 ${isMenuOpen ? 'flex flex-col mt-4' : 'hidden md:flex'}`}>
+                            <div className={`w-full md:w-auto md:flex items-center gap-4 ${isMenuOpen ? 'flex flex-col mt-4 backdrop-blur-md bg-white/70 dark:bg-gray-900/70' : 'hidden md:flex'}`}>
                                 <Button variant="ghost" asChild className="w-full md:w-auto justify-start">
                                     <Link href="/privacy">
                                         <ShieldCheck className="mr-2 h-4 w-4" />
