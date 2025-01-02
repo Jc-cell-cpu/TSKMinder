@@ -127,12 +127,12 @@ export default function PricingPage() {
             <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
                 <AnimatedGradient />
                 <motion.h1
-                    className="text-4xl sm:text-5xl font-bold text-center mb-10"
+                    className="text-4xl sm:text-5xl md:text-4xl lg:text-5xl font-bold text-center mb-10"
                     initial={{ opacity: 0, y: -50 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
                 >
-                    Choose Your Perfect Plan
+                    Choose Your Perfect <span className='font-bold tracking-tighter bg-gradient-to-r from-purple-500 via-fuchsia-500 to-cyan-400 bg-clip-text text-transparent'>Plan</span>
                 </motion.h1>
 
                 <div className="flex justify-center mb-10">

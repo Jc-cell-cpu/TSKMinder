@@ -42,7 +42,7 @@ const PolicyLayout = ({ children }: PolicyLayoutProps) => {
                     <div className="mx-auto max-w-screen-2xl p-4">
                         <nav className="flex flex-wrap justify-between items-center">
                             <Link href="/" className="flex items-center gap-3">
-                                <Image src="/logo.svg" height={50} width={50} alt="TaskMinder Logo" />
+                                <Image src="/logo.svg" height={40} width={40} alt="TaskMinder Logo" />
                                 <span className="text-xl font-bold text-blue-600 mr-2">TaskMinder</span>
                             </Link>
                             <Button
@@ -66,6 +66,9 @@ const PolicyLayout = ({ children }: PolicyLayoutProps) => {
                                     </Link>
                                 </Button>
                                 <ThemeToggle />
+                                <Button variant="primary" className="dark:border-none w-full md:w-auto" asChild>
+                                    <Link href="/sign-in">Sign In</Link>
+                                </Button>
                                 <Button variant="primary" className="dark:border-none w-full md:w-auto" asChild>
                                     <Link href="/sign-up">Sign Up</Link>
                                 </Button>
