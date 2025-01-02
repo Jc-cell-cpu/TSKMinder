@@ -31,8 +31,8 @@ import { AnimatedAlert } from "@/features/Alert-component"
 import { PasswordInput } from '@/features/auth/components/password-toggle'
 
 const formSchema = z.object({
-    email: z.string().email(),
-    password: z.string().min(1, "Required"),
+    email: z.string().email("Invalid email address"),
+    password: z.string().min(1, "Password is required"),
 })
 
 export const SignInCard = () => {
@@ -71,9 +71,10 @@ export const SignInCard = () => {
         } catch (error) {
             setAlert({
                 id: Date.now().toString(),
-                message: 'Something went wrong',
+                message: 'An unexpected error occurred. Please try again.',
                 type: 'error'
             })
+            console.error('Sign-in error:', error)
         } finally {
             setIsLoading(false)
         }
@@ -130,12 +131,12 @@ export const SignInCard = () => {
                                 </span>
                             </Link>
                         </CardDescription>
-                        <Button disabled={isLoading} size="lg" className="w-full">
+                        <Button type="submit" disabled={isLoading} size="lg" className="w-full">
                             {isLoading ? "Signing in..." : "Login"}
                         </Button>
                     </form>
                     <CardDescription className="mt-4">
-                        Don&apos;t have a account{" "}
+                        Don&apos;t have an account?{" "}
                         <Link href="/sign-up">
                             <span className="text-blue-700 hover:text-blue-600">Sign Up</span>
                         </Link>
@@ -151,6 +152,7 @@ export const SignInCard = () => {
                     variant="outline"
                     size="lg"
                     className="w-full"
+                    onClick={() => {/* TODO: Implement Google sign-in */ }}
                 >
                     <FcGoogle className="mr-2 size-7" />
                     Login with Google
@@ -160,6 +162,7 @@ export const SignInCard = () => {
                     variant="outline"
                     size="lg"
                     className="w-full"
+                    onClick={() => {/* TODO: Implement GitHub sign-in */ }}
                 >
                     <FaGithub className="mr-2 size-7" />
                     Login with Github
